@@ -1,6 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App" appvueused="傳入的字串"/>
+  <p>
+  <label>    
+    <input type="checkbox" v-model="isShow"> isShow: {{ isShow }}
+  </label>
+  </p>
+  <img v-if="isShow"  alt="Vue logo" src="./assets/logo.png">
+
+  <HelloWorld msg="Welcome to Your Vue.js App" appvueused="傳入的字串" />
+  <p> {{customid}} </p>
+  <p> {{customna}} </p>
 </template>
 
 <script>
@@ -11,12 +19,18 @@ export default {
   components: {
     HelloWorld
   },
+  props:{
+  },
   data () {
     return {
-    customid :'TEST ABC'
+    isShow:false ,
+    customid :'App.vue 本身的 data',
+    customna :'App.vue 本身的 data 第二項'
+    },
+    created() {
+      console.log('created');
     }
   }
-
 }
 </script>
 
