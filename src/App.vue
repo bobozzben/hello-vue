@@ -26,10 +26,10 @@ export default {
     isShow:false ,
     customid :'App.vue 本身的 data',
     customna :'App.vue 本身的 data 第二項'
-    },
-    created() {
-      console.log('created');
     }
+   // created() {
+   //   console.log('created');
+   // }
   }
 }
 </script>
